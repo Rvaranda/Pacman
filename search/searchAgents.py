@@ -28,7 +28,6 @@ from game import Actions
 import util
 import time
 import search
-# import self to use dir()
 import searchAgents
 
 class GoWestAgent(Agent):
@@ -501,12 +500,6 @@ def foodHeuristic(state, problem):
   for i in foodGrid.asList():
     maxDistance=max(maxDistance,util.manhattanDistance(position,i))
   return maxDistance
-  '''foodList = foodGrid.asList()
-  if len(foodList) == 0:
-  	return 0
-  
-  closestFood = closestPoint(position, foodList)
-  return euclidieanDistance(position, closestFood) + len(foodList)'''
   
 class ClosestDotSearchAgent(SearchAgent):
   "Search for all food using a sequence of searches"
